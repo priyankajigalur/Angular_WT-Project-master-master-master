@@ -1,0 +1,203 @@
+
+    <header>
+        <!-- <nav>
+            <ul class="a1"> 
+                <li class="b"><a><img src="../assets/sidebar.svg" alt="Navigation icon" width="50mm" height="50mm"></a>
+                    <ul class="c">
+                        <li class="d"><a href="about.html">About Us</a></li>
+                        <li class="d"><a>Features</a></li>
+                        <li class="d"><a href="term.html">Terms</a></li>
+                        <li class="d"><a href="policy.html">Policy</a></li>
+                        <li class="d"><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+            </ul>     
+        </nav> -->
+        <!-- (click)="onclick()" -->
+        <div id="sidebar" onclick="togglemenu()" >
+
+            <div class="toggle-btn" >
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+                <ul>
+                    <li [ngStyle]="{'color':'white'}" ><a href="/home">Home</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li>Gallery</li>
+                    <li><a href="/terms">Terms</a></li>
+                    <li><a href="/policy">Policy</a></li>
+                    <li><a href="/feed">Feedback</a></li>
+                </ul>
+        </div>        
+        <div class="main" >
+            <div class="logo">
+                <img src="../assets/logo.jpg" alt="Logo">
+            </div>
+            <ul class="menubar">
+            <li class="active1" style="color: white;"><a href="/home">Home</a></li>
+            <li><a routerLink="/login">Create Your Event</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#"data-toggle="modal" data-target="#modalLRForm">Login </a></li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--Modal: Login / Register Form-->
+        <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog cascading-modal" role="document">
+            <!--Content-->
+            <div class="modal-content">
+        
+              <!--Modal cascading tabs-->
+              <div class="modal-c-tabs">
+        
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills" role="tablist" style="height: 1.2cm; background-color:  rgba(182, 179, 179, 0.767);;"  >
+                  <li class="nav-item">
+                    <a class="nav-link active" style="color: black; padding-left: 2cm ; padding-right: 25mm; " data-toggle="tab" href="#panel7" role="tab">
+                      Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" style="color: black; padding-left: 15mm ; padding-right: 2.5cm;" href="#panel8" role="tab">
+                      Sign Up</a>
+                  </li>
+                  <li>
+                    <span class="close" style="padding-left:5mm; padding-top: 3mm; color: black;"  data-dismiss="modal">&times;</span>
+                  </li>
+                </ul>
+        
+      
+      
+      
+      
+      
+      
+                <div class="tab-content">
+                  <!--Panel 7-->
+                  <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+                      <!--Body-->
+                    <div class="modal-body mb-0">
+                      <div class="md-form form-sm mb-0">
+                        <label data-error="wrong" data-success="right" for="modalLRInput10" style="font: bold;"> Email</label>
+                        <input type="email" id="modalLRInput10" class="form-control form-control-sm validate" style="  width: 100%;
+                        height:1cm;
+                        padding: 15px;
+                        margin: 5px 0 22px 0;
+                        display: inline-block;
+                        border: none;
+                        background: #f1f1f1;">
+                        
+                      </div>
+        
+                      <div class="md-form form-sm mb-0">
+                        <label data-error="wrong" data-success="right" for="modalLRInput11" style="font: bolder;">Password</label>
+                        <input type="password" id="modalLRInput11" class="form-control form-control-sm validate"
+                        style="  width: 100%;
+                        height:1cm;
+                        padding: 15px;
+                        margin: 5px 0 22px 0;
+                        display: inline-block;
+                        border: none;
+                        background: #f1f1f1;">
+                        
+                      </div>
+                      <div class="text-center">
+                        <button style=" width: 100%;
+                        background: green;
+                        color: white;
+                        padding: 14px 20px;
+                        margin: 8px 0;
+                        border: none;
+                        cursor: pointer;
+                        opacity: 0.9;">Log In</button>
+                      </div>
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                      <div class="options text-center text-md-right mt-1">
+                        <p>Not a member? <a class="nav-link" data-toggle="tab" href="#panel8"  role="tab" class="blue-text">Sign Up</a></p>
+                        <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                      </div>
+                      <!-- <button type="button" class="btn btn-outline-info waves-effect ml-auto" style="color: black; border:1px solid black;" data-dismiss="modal">Close</button> -->
+                    </div>
+        
+                  </div>
+                  <!--/.Panel 7-->
+        
+                  <!--Panel 8-->
+                  <div class="tab-pane fade" id="panel8" role="tabpanel">
+        
+                    <!--Body-->
+                    <div class="modal-body">
+                      <div class="md-form form-sm mb-0">
+                        <label data-error="wrong" data-success="right" for="modalLRInput12" style="font: bolder;">Email</label>
+                        <input type="email" id="modalLRInput12" class="form-control form-control-sm validate"   style="  width: 100%;
+                        height:1cm;
+                        padding: 15px;
+                        margin: 5px 0 22px 0;
+                        display: inline-block;
+                        border: none;
+                        background: #f1f1f1;">
+                        
+                      </div>
+        
+                      <div class="md-form form-sm mb-0">
+                        <label data-error="wrong" data-success="right" for="modalLRInput13" style="font: bolder;">New Password</label>
+                        <input type="password" id="modalLRInput13" class="form-control form-control-sm validate"  style="  width: 100%;
+                        height:1cm;
+                        padding: 15px;
+                        margin: 5px 0 22px 0;
+                        display: inline-block;
+                        border: none;
+                        background: #f1f1f1;"> 
+                        
+                      </div>
+        
+                      <div class="md-form">
+                        <label data-error="wrong" data-success="right" for="modalLRInput14" style="font: bolder;">Repeat Password</label>
+                        <input type="password" id="modalLRInput14" class="form-control form-control-sm validate"   style="  width: 100%;
+                        height:1cm;
+                        padding: 15px;
+                        margin: 5px 0 22px 0;
+                        display: inline-block;
+                        border: none;
+                        background: #f1f1f1;">
+                        
+                      </div>
+        
+                      <div class="text-center form-sm mt-2">
+                        <button style="  width: 100%;
+                        background: green;
+                        color: white;
+                        padding: 14px 20px;
+                        margin: 8px 0;
+                        border: none;
+                        cursor: pointer;
+                        opacity: 0.9;">Sign Up</button>
+                      </div>
+        
+                    </div>
+                    <!--Footer-->
+                    <!-- <div class="modal-footer">
+                      <button type="button" class="btn btn-outline-info waves-effect ml-auto" style="color: black; border:1px solid black;"data-dismiss="modal">Close</button>
+                    </div>
+                  </div> -->
+                  <!--/.Panel 8-->
+                </div>
+        
+              </div>
+            </div>
+            <!--/.Content-->
+          </div>
+        </div>
+        <!--Modal: Login / Register Form-->
+        
+      
